@@ -1,0 +1,10 @@
+<ul class="list-group">
+  <li
+    *ngFor="let category of filterOption"
+    class="list-group-item"
+    (click)="onClick(category.key)"
+    [ngClass]="{ active: filterBy == category.key }"
+  >
+    {{ category?.value }}
+  </li>
+</ul>

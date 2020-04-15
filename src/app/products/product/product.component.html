@@ -1,0 +1,20 @@
+<div class="card">
+  <img [src]="product.image" class="card-img-top" [alt]="product.details" />
+  <div class="card-body">
+    <h5 class="card-title">{{ product.name }}</h5>
+    <p class="card-text">{{ product.price | currency:'USD' }}</p>
+  </div>
+  <button *ngIf="!product?.quantity" class="btn btn-secondary btn-block btn-lg" (click)="add(product)">
+    Add To Cart
+  </button>
+  <div
+    class="border d-flex justify-content-between"
+    role="group"
+    aria-label="Basic example"
+    *ngIf="product?.quantity"
+  >
+    <button type="button" class="btn btn-secondary btn-lg" (click)="remove(product)">-</button>
+    <p class="font-weight-bold m-auto">{{ product.quantity }} in cart</p>
+    <button type="button" class="btn btn-secondary btn-lg" (click)="add(product)">+</button>
+  </div>
+</div>
