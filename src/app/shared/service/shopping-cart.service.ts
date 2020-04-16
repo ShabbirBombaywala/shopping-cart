@@ -28,7 +28,7 @@ export class ShoppingCartService {
     return [{ key: -1, value: 'All Categories' }, ...Categories];
   }
 
-  addToCart(product: Product) {
+  updateCart(product: Product) {
     if (product.quantity === 0) {
       this.cart = [...this.cart.filter(i => i.id !== product.id)];
     } else {

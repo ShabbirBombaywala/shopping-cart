@@ -29,7 +29,7 @@ export class ProductListComponent implements OnInit {
   }
 
   quanityChanged(product) {
-    this.service.addToCart(product);
+    this.service.updateCart(product);
   }
 
   filterProduct(filter) {

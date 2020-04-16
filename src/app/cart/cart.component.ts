@@ -1,14 +1,15 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Product } from 'src/app/core/model';
-import { ShoppingCartService } from 'src/app/shared/service/shopping-cart.service';
+import { Component, OnInit } from '@angular/core';
+import { Product } from '../core/model';
 import { Subscription } from 'rxjs';
+import { ShoppingCartService } from '../shared/service/shopping-cart.service';
 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.scss'],
+  styleUrls: ['./cart.component.scss']
 })
-export class CartComponent implements OnInit, OnDestroy {
+export class CartComponent implements OnInit {
+
   cartItems: Product[] = [];
   subscription: Subscription;
 
@@ -19,7 +20,7 @@ export class CartComponent implements OnInit, OnDestroy {
     });
   }
   ngOnInit(): void {
-      
+    this.cartItems = this.service.getCartItems();
   }
 
   removeAllItems() {
