@@ -20,6 +20,10 @@ export class ShoppingCartService {
     return Products;
   }
 
+  getCartItems(){
+    return this.cart;
+  }
+
   getAllCategories(): any {
     return [{ key: -1, value: 'All Categories' }, ...Categories];
   }

@@ -8,6 +8,8 @@ import { CommonModule } from '@angular/common';
 import { ProductFilterComponent } from './products/product-filter/product-filter.component';
 import { ProductComponent } from './products/product/product.component';
 import { CartComponent } from './cart-details/cart/cart.component';
+import { Error404Component } from './errors/error-404.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { CartComponent } from './cart-details/cart/cart.component';
     ProductListComponent,
     ProductFilterComponent,
     ProductComponent,
-    CartComponent
+    CartComponent,
+    Error404Component,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
