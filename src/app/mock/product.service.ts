@@ -2,15 +2,15 @@ import { Injectable } from '@angular/core';
 import { InMemoryDbService } from 'angular-in-memory-web-api';
 import { Product } from '../core/model';
 
-@Injectable({
-  providedIn: 'root',
-})
-export class ProductService implements InMemoryDbService {
-  createDb() {
-    const products: Product[] = Products;
-    return { products };
-  }
-}
+// @Injectable({
+//   providedIn: 'root',
+// })
+// export class ProductService implements InMemoryDbService {
+//   createDb() {
+//     const products: Product[] = Products;
+//     return { products };
+//   }
+// }
 
 export const Products = [
   {

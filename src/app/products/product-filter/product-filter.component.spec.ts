@@ -16,10 +16,18 @@ describe('ProductFilterComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(ProductFilterComponent);
     component = fixture.componentInstance;
+    component.filterBy = -1;
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should call filter change event in case user select category', () => {
+    spyOn(component.filterProduct, 'emit');
+    const filterOption = 3;
+    component.onClick(filterOption);
+    expect(component.filterProduct.emit).toHaveBeenCalledWith(filterOption);
   });
 });

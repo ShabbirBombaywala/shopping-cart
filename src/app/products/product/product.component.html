@@ -1,8 +1,8 @@
 <div class="card">
-  <img [src]="product.image" class="card-img-top" [alt]="product.details" />
+  <img [src]="product?.image" class="card-img-top" [alt]="product?.details" />
   <div class="card-body">
-    <h5 class="card-title">{{ product.name }}</h5>
-    <p class="card-text">{{ product.price | currency:'USD' }}</p>
+    <h5 class="card-title">{{ product?.name }}</h5>
+    <p class="card-text">{{ product?.price | currency:'USD' }}</p>
   </div>
   <button *ngIf="!product?.quantity" class="btn btn-secondary btn-block btn-lg" (click)="add(product)">
     Add To Cart

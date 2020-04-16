@@ -14,7 +14,6 @@ export class ProductFilterComponent implements OnInit {
   ngOnInit(): void {}
 
   onClick(option) {
-    this.filterBy = option;
     this.filterProduct.emit(option);
   }
 }

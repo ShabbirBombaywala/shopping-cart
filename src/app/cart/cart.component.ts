@@ -6,13 +6,11 @@ import { ShoppingCartService } from '../shared/service/shopping-cart.service';
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.scss']
+  styleUrls: ['./cart.component.scss'],
 })
 export class CartComponent implements OnInit {
-
   cartItems: Product[] = [];
   subscription: Subscription;
-
 
   constructor(private service: ShoppingCartService) {
     this.subscription = service.cartChange$.subscribe((items) => {
@@ -27,7 +25,7 @@ export class CartComponent implements OnInit {
     this.service.clearCartItem();
   }
 
-  removeItem(item){
+  removeItem(item) {
     this.service.removeFromCart(item);
   }
 
